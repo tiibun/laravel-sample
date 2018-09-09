@@ -30,6 +30,7 @@ services:
   web:
     image: nginx:1.15-alpine
     volumes:
+      - .:/var/www/html
       - ./docker/nginx/conf.d:/etc/nginx/conf.d
     environment:
       TZ: Asia/Tokyo
